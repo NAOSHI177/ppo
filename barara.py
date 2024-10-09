@@ -10,9 +10,9 @@ def install_pip():
 
 def install_packages():
     packages = [
-        "opencv",
-        "python-imaging",
-        "mediapipe"
+        "opencv-python==4.6.0.66",
+        "imutils==0.5.4",
+        "mediapipe==0.8.10.1"
     ]
     
     for package in packages:
