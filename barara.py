@@ -10,13 +10,13 @@ def install_pip():
 
 def install_packages():
     packages = [
-        "opencv-python==4.6.0.66",
-        "imutils==0.5.4",
-        "mediapipe==0.8.10.1"
+        "opencv",
+        "python-imaging",
+        "mediapipe"
     ]
     
     for package in packages:
-        subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+        subprocess.check_call(["sudo", "pacman", "-S", "--noconfirm", package])
 
 if __name__ == "__main__":
     try:
