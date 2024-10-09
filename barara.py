@@ -1,5 +1,4 @@
 import subprocess
-
 def install_packages():
     packages = [
         "opencv-python==4.6.0.66",
@@ -8,7 +7,7 @@ def install_packages():
     ]
     
     for package in packages:
-        subprocess.check_call(["sudo", "pacman", "-S", "--noconfirm", package])
+        subprocess.check_call(["pacman", "-S", package, "--noconfirm"])
 
 if __name__ == "__main__":
     install_packages()
